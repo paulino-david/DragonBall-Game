@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+  width: 100dvw;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+}
+
+main {
+  background: url("https://www.fightersgeneration.com/nf9/game/stage/samuraishodown2-stage-gairyu-isle.gif");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+main .logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  gap: 0;
+}
+main .logo img {
+  width: 35%;
+}
+main .vs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2rem 1rem;
+  gap: 0;
+}
+main .vs .player, main .vs .versus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0 1rem;
+  gap: 0;
+}
+main .vs .player .personaje, main .vs .versus .personaje {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 60dvh;
+  padding: 0;
+  gap: 0;
+  position: relative;
+  background: rgba(0, 0, 0, 0.23);
+}
+main .vs .player .personaje img, main .vs .versus .personaje img {
+  max-width: 36%;
+}
+main .vs .player .personaje .infoJugador, main .vs .versus .personaje .infoJugador {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  gap: 1rem;
+  position: absolute;
+  bottom: 2rem;
+}
+main .vs .player h1, main .vs .player h2, main .vs .player p, main .vs .versus h1, main .vs .versus h2, main .vs .versus p {
+  font-family: "Anton", Impact, sans-serif;
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-transform: uppercase;
+  color: #ffd33d;
+  -webkit-text-stroke: 1px #171717;
+  text-shadow: 2px 2px 0 #171717;
+}
+main .vs .player p, main .vs .versus p {
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+main .vs .versus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  height: auto;
+  padding: 0;
+  gap: 4rem;
+}
+main .vs .versus img {
+  width: 100%;
+}
+main .azar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 2rem 1rem;
+  gap: 0;
+}
+main .azar button {
+  font-family: "Anton", Impact, sans-serif;
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-transform: uppercase;
+  color: #ffd33d;
+  -webkit-text-stroke: 1px #171717;
+  text-shadow: 2px 2px 0 #171717;
+  background-color: red;
+  border: solid 4px #ffd33d;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  outline: none;
+}/*# sourceMappingURL=style.css.map */
