@@ -103,7 +103,7 @@ main .vs .player h1, main .vs .player h2, main .vs .player p, main .vs .versus h
   text-shadow: 2px 2px 0 #171717;
 }
 main .vs .player p, main .vs .versus p {
-  font-size: clamp(0.8rem, 1vw, 1rem);
+  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 main .vs .versus {
   display: flex;

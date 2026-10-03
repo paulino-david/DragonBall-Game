@@ -11,7 +11,7 @@ boton_azar.addEventListener("click", async () => {
 
         const jugadores = await enlace()
     
-        ganador= await mostrarPersonajes(jugadores.J1 == jugadores.J2 ? await enlace() : jugadores)
+        ganador= await mostrarPersonajes(jugadores.J1 == jugadores.J2 ? boton_azar.click() : jugadores)
     }
 
 
