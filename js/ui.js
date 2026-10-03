@@ -17,19 +17,22 @@ const div_jugarNuevo = document.querySelectorAll(".jugar-nuevo")
 
 const img_ganador = document.querySelectorAll(".ganador")
 
+const h1 = document.getElementsByTagName("h1")
+
 
 const ganador = (jugadores) => {
     return (jugadores.J1.ki > jugadores.J2.ki ? jugadores.J1.name : jugadores.J2.name)
 }
 
 const mostrarJugadores = (jugadores) => {
+    console.log(h1)
 
     for (let index = 0; index < div_jugarNuevo.length; index++) {
         div_jugarNuevo[index].style.display = "none"
         img_ganador[index].style.display = "none"
 
     }
-
+    console.log(jugadores)
     J1.textContent = jugadores.J1.name
     imagenJ1.src = jugadores.J1.image
     planeta1.textContent = jugadores.J1.race
@@ -57,15 +60,18 @@ export const mostrarGanador = (jugadores) => {
 
     }
 
+    // h1.style.display="none"
+    console.log(h1)
+
     const landscape = window.matchMedia("(orientation: landscape)");
 
     function alCambiarOrientacion(event) {
-        if (event.matches) {
-            console.log("El móvil está en horizontal");
-            // Haz algo aquí
-        } else {
+        // if (event.matches) {
+        //     console.log("El móvil está en horizontal");
+        //     // Haz algo aquí
+        // } else {
 
-        }
+        // }
         J1.textContent != winner ? player1.style.display = "none" : player2.style.display = "none"
         versus.style.display = "none"
     

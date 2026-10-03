@@ -39,7 +39,7 @@ main
 
             gap: 1rem
             .personaje
-                @include mixins.fixin($direccion: column, $width: 100%, $justify: end, $align: center, $height: 55dvh)
+                @include mixins.fixin($direccion: column, $width: 100%, $justify: end, $align: center, $height: 53dvh)
                 position: relative
                 // background: rgba(252, 23, 23, 0.23)
 
@@ -60,13 +60,17 @@ main
 
             h1,h2,p
                 font-family: 'Anton', Impact, sans-serif
-                font-size: clamp(1rem, 3vw, 2rem)
+                font-size: clamp(1rem, 2vw, 2rem)
                 text-transform: uppercase
                 color: variables.$naranja
                 -webkit-text-stroke: 1px #171717
                 text-shadow: variables.$sombra-texto
             p
                 font-size: clamp(0.8rem, 2vw, 1rem)
+
+            h1
+                font-size: clamp(1rem, 2vw, 1.5rem)
+
 
         .versus
 

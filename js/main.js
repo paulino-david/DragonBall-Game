@@ -11,11 +11,21 @@ boton_azar.addEventListener("click", async () => {
 
         const jugadores = await enlace()
     
-        ganador= await mostrarPersonajes(jugadores.J1 == jugadores.J2 ? boton_azar.click() : jugadores)
+        ganador= await mostrarPersonajes(jugadores.J1 == jugadores.J2 ? await enlace() : jugadores)
+
+        console.log(ganador)
     }
 
+    if ( await ganador.J1.name==await ganador.J2.name){
+        boton_azar.click()
+    }
+    else{
 
-    setTimeout(async ()=> mostrarGanador(await ganador),2000)
+        setTimeout(async ()=> mostrarGanador(await ganador),2000)
+    }
+    // while 
+
+
    
 
 })
@@ -25,7 +35,8 @@ boton_azar.addEventListener("click", async () => {
 
 btn_jugarNuevo.forEach(div => {
     div.addEventListener("click", async () => {
-        const jugadores = await enlace()
-        mostrarPersonajes((jugadores.J1 == jugadores.J2 ? await enlace() : jugadores))
+        // const jugadores = await enlace()
+        window.location.reload()
+        // mostrarPersonajes((jugadores.J1 == jugadores.J2 ? await enlace() : jugadores))
     })
 })

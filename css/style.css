@@ -65,7 +65,7 @@ main .vs .player .personaje, main .vs .versus .personaje {
   justify-content: end;
   align-items: center;
   width: 100%;
-  height: 55dvh;
+  height: 53dvh;
   padding: 0;
   gap: 0;
   position: relative;
@@ -96,7 +96,7 @@ main .vs .player .personaje .ganador, main .vs .versus .personaje .ganador {
 }
 main .vs .player h1, main .vs .player h2, main .vs .player p, main .vs .versus h1, main .vs .versus h2, main .vs .versus p {
   font-family: "Anton", Impact, sans-serif;
-  font-size: clamp(1rem, 3vw, 2rem);
+  font-size: clamp(1rem, 2vw, 2rem);
   text-transform: uppercase;
   color: #ffd33d;
   -webkit-text-stroke: 1px #171717;
@@ -104,6 +104,9 @@ main .vs .player h1, main .vs .player h2, main .vs .player p, main .vs .versus h
 }
 main .vs .player p, main .vs .versus p {
   font-size: clamp(0.8rem, 2vw, 1rem);
+}
+main .vs .player h1, main .vs .versus h1 {
+  font-size: clamp(1rem, 2vw, 1.5rem);
 }
 main .vs .versus {
   display: flex;
