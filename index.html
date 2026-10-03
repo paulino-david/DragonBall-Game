@@ -1,68 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/land.css">
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <main>
-        <!-- <video id="video" autoplay muted playsinline loop>
+      <!-- <video id="video" autoplay muted playsinline loop>
             <source src="/music/Screen Recording 2026-10-01 122005.mp4" type="video/mp4" width="0" height="0">
             Tu navegador no admite video HTML5.
         </video> -->
 
-        <div class="logo">
-            <img src="https://www.pinclipart.com/picdir/big/540-5407995_dragonball-z-logo-png-transparent-svg-vector-dragon.png"
-                alt="Dragon Ball Logo">
+    <!-- <audio src="https://opengameart.org/sites/default/files/Combat%20Theme.mp3" autoplay loop></audio> -->
+
+      <div class="logo">
+        <img
+          src="https://www.pinclipart.com/picdir/big/540-5407995_dragonball-z-logo-png-transparent-svg-vector-dragon.png"
+          alt="Dragon Ball Logo"
+        />
+      </div>
+      <div class="vs">
+        <div class="player" id="player1">
+          <div class="personaje">
+            <img
+              id="img-j1"
+              src="https://dragonball-api.com/characters/goku_normal.webp"
+              alt=""
+              class="jugador"
+            />
+            <div class="infoJugador">
+              <img src="./img/winner.PNG" alt="" class="ganador" />
+
+              <h2 class="nombre" id="jugador1">Goku</h2>
+              <p id="planeta1" class="descripcion">
+                El guerrero más fuerte de la Tierra
+              </p>
+            </div>
+          </div>
+          <h1>Jugador 1</h1>
+          <div class="azar jugar-nuevo">
+            <button type="button" class="btn-jugarNuevo">Jugar de nuevo</button>
+          </div>
         </div>
-        <div class="vs">
-            <div class="player" id="player1">
-
-                <div class="personaje">
-                    <img id="img-j1" src="https://dragonball-api.com/characters/goku_normal.webp" alt=""
-                        class="jugador">
-                    <div class="infoJugador">
-                        <h2 class="nombre" id="jugador1">Goku</h2>
-                        <p id="planeta1" class="descripcion">El guerrero más fuerte de la Tierra</p>
-                    </div>
-                </div>
-                <h1>
-                    Jugador 1
-                </h1>
-            </div>
-            <div class="versus" id="versus">
-                <img src="https://www.pngmart.com/files/11/Versus-Battle-Transparent-PNG.png" alt="">
-                <div class="azar">
-                    <button class="btn-azar" id="boton-azar">Randomizar</button>
-                </div>
-            </div>
-            <div class="player" id="player2">
-
-
-                <div class="personaje">
-                    <img id="img-j2" src="https://dragonball-api.com/characters/vegeta_normal.webp" alt=""
-                        class="jugador">
-                    <div class="infoJugador">
-                        <h2 class="nombre" id="jugador2">Vegeta</h2>
-                        <p id="planeta2" class="descripcion">El guerrero más fuerte de la Tierra</p>
-                    </div>
-                </div>
-                <h1>
-                    Jugador 2
-                </h1>
-            </div>
+        <div class="versus" id="versus">
+          <img
+            src="https://www.pngmart.com/files/11/Versus-Battle-Transparent-PNG.png"
+            alt=""
+          />
+          <div class="azar">
+            <button class="btn-azar" id="boton-azar">Randomizar</button>
+          </div>
         </div>
+        <div class="player" id="player2">
+          <div class="personaje">
+            <img
+              id="img-j2"
+              src="https://dragonball-api.com/characters/vegeta_normal.webp"
+              alt=""
+              class="jugador"
+            />
+            <div class="infoJugador">
+              <img src="./img/winner.PNG" alt="" class="ganador" />
+              <h2 class="nombre" id="jugador2">Vegeta</h2>
+              <p id="planeta2" class="descripcion">
+                El guerrero más fuerte de la Tierra
+              </p>
+            </div>
+          </div>
+          <h1>Jugador 2</h1>
 
-        <!-- <footer>
+          <div class="azar jugar-nuevo">
+            <button type="button" class="btn-jugarNuevo">Jugar de nuevo</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="jugar-nuevo">
+            <h1>
+                ui
+            </h1>
+        </div> -->
+
+      <!-- <footer>
             <p>&copy; 2023 Dragon Ball Fighters. All rights reserved.</p>
         </footer> -->
     </main>
 
     <script src="js/main.js" type="module"></script>
-</body>
-
+  </body>
 </html>

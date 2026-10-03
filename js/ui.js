@@ -13,13 +13,22 @@ const player2 = document.getElementById('player2')
 
 const personajes = document.querySelectorAll('.personaje')
 
+const div_jugarNuevo = document.querySelectorAll(".jugar-nuevo")
+
+const img_ganador = document.querySelectorAll(".ganador")
+
+
 const ganador = (jugadores) => {
     return (jugadores.J1.ki > jugadores.J2.ki ? jugadores.J1.name : jugadores.J2.name)
 }
 
 const mostrarJugadores = (jugadores) => {
 
-    console.log(jugadores.J1.name + " vs " + jugadores.J2.name)
+    for (let index = 0; index < div_jugarNuevo.length; index++) {
+        div_jugarNuevo[index].style.display = "none"
+        img_ganador[index].style.display = "none"
+
+    }
 
     J1.textContent = jugadores.J1.name
     imagenJ1.src = jugadores.J1.image
@@ -29,20 +38,50 @@ const mostrarJugadores = (jugadores) => {
     imagenJ2.src = jugadores.J2.image
     planeta2.textContent = jugadores.J2.race
 
-    setTimeout(() => {
-        console.log(ganador(jugadores))
-        const winner = ganador(jugadores)
-        J1.textContent != winner ? player1.style.display = "none" : player2.style.display = "none"
-        versus.style.display = "none"
-        console.log(personajes)
-        J1.textContent != winner ? imagenJ1.style.width = "50px" : imagenJ2.style.width = "50px"
-        J1.textContent != winner ? imagenJ1.style.height = "100%" : imagenJ2.style.height = "100%"
-        
+    versus.style.display = "flex"
+    player1.style.display = "flex"
+    player2.style.display = "flex"
 
-    }, 2000)
+    return jugadores
 
 
 }
+
+export const mostrarGanador = (jugadores) => {
+
+    const winner = ganador(jugadores)
+
+    for (let index = 0; index < div_jugarNuevo.length; index++) {
+        div_jugarNuevo[index].style.display = "flex"
+        img_ganador[index].style.display = "flex"
+
+    }
+
+    const landscape = window.matchMedia("(orientation: landscape)");
+
+    function alCambiarOrientacion(event) {
+        if (event.matches) {
+            console.log("El móvil está en horizontal");
+            // Haz algo aquí
+        } else {
+
+        }
+        J1.textContent != winner ? player1.style.display = "none" : player2.style.display = "none"
+        versus.style.display = "none"
+    
+        J1.textContent != winner ? imagenJ1.style.width = "100%" : imagenJ2.style.width = "100%"
+        J1.textContent != winner ? imagenJ1.style.height = "100%" : imagenJ2.style.height = "100%"
+
+    }    
+
+    landscape.addEventListener("change", alCambiarOrientacion);
+
+    // Comprueba también la orientación inicial
+    alCambiarOrientacion(landscape);
+
+
+}
+
 
 
 

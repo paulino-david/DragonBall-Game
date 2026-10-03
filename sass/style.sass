@@ -22,6 +22,7 @@ main
     height: 100%
     background-size: cover
     background-position: center
+    overflow: hidden
 
     .logo
         @include mixins.fixin($width: 100%, $justify: center, $align: center, $padding: 1rem 0)
@@ -36,17 +37,27 @@ main
         .player,.versus
             @include mixins.fixin($direccion: column, $width: 100%, $justify: space-between, $align: center, $padding: 0 1rem)
 
+            gap: 1rem
             .personaje
-                @include mixins.fixin($direccion: column, $width: 100%, $justify: end, $align: center, $height: 60dvh)
+                @include mixins.fixin($direccion: column, $width: 100%, $justify: end, $align: center, $height: 55dvh)
                 position: relative
-                background: rgba(0, 0, 0, 0.23)
+                // background: rgba(252, 23, 23, 0.23)
 
                 img
-                    max-width: 36%
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+                    object-position: center
+
                 .infoJugador
                     @include mixins.fixin($direccion: column, $width: 100%, $justify: space-between, $align: center, $gap: 1rem)
                     position: absolute
                     bottom: 2rem
+
+                .ganador
+                    width: 25%
+                    display: none
+
             h1,h2,p
                 font-family: 'Anton', Impact, sans-serif
                 font-size: clamp(1rem, 3vw, 2rem)
@@ -81,3 +92,15 @@ main
             cursor: pointer
             outline: none
             // transition: all .3s ease-in-out
+
+    .jugar-nuevo
+        height: 4.5rem
+        margin-top: .5rem
+        display: none
+
+        button 
+            height: 100%
+            padding: 1.5rem
+            font-size: 25px
+            display: flex
+            align-items: center

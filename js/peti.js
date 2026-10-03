@@ -1,7 +1,6 @@
 const enlace = async () => {
     const url = await fetch("https://dragonball-api.com/api/characters")
     const data = await url.json()
-    console.log(data)
 
 
     let listaPersonajes = []

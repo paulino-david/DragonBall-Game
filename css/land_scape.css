@@ -1,0 +1,25 @@
+@media (orientation: landscape) {
+  .logo {
+    height: 30% !important;
+  }
+  .logo img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .vs {
+    height: 65% !important;
+  }
+  .vs .versus {
+    gap: 0 !important;
+  }
+  .vs .versus img, .vs .versus .azar, .vs .versus .jugar-nuevo {
+    width: 70% !important;
+  }
+  .vs .versus img button, .vs .versus .azar button, .vs .versus .jugar-nuevo button {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 2rem);
+    display: flex;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=land_scape.css.map */

@@ -23,6 +23,7 @@ main {
   height: 100%;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
 main .logo {
   display: flex;
@@ -56,6 +57,7 @@ main .vs .player, main .vs .versus {
   height: auto;
   padding: 0 1rem;
   gap: 0;
+  gap: 1rem;
 }
 main .vs .player .personaje, main .vs .versus .personaje {
   display: flex;
@@ -63,14 +65,18 @@ main .vs .player .personaje, main .vs .versus .personaje {
   justify-content: end;
   align-items: center;
   width: 100%;
-  height: 60dvh;
+  height: 55dvh;
   padding: 0;
   gap: 0;
   position: relative;
-  background: rgba(0, 0, 0, 0.23);
 }
 main .vs .player .personaje img, main .vs .versus .personaje img {
-  max-width: 36%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
 }
 main .vs .player .personaje .infoJugador, main .vs .versus .personaje .infoJugador {
   display: flex;
@@ -83,6 +89,10 @@ main .vs .player .personaje .infoJugador, main .vs .versus .personaje .infoJugad
   gap: 1rem;
   position: absolute;
   bottom: 2rem;
+}
+main .vs .player .personaje .ganador, main .vs .versus .personaje .ganador {
+  width: 25%;
+  display: none;
 }
 main .vs .player h1, main .vs .player h2, main .vs .player p, main .vs .versus h1, main .vs .versus h2, main .vs .versus p {
   font-family: "Anton", Impact, sans-serif;
@@ -131,4 +141,16 @@ main .azar button {
   padding: 1rem 2rem;
   cursor: pointer;
   outline: none;
+}
+main .jugar-nuevo {
+  height: 4.5rem;
+  margin-top: 0.5rem;
+  display: none;
+}
+main .jugar-nuevo button {
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
