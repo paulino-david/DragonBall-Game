@@ -55,16 +55,19 @@ main
                     bottom: 2rem
 
                 .ganador
+                    position: relative !important
                     width: 25%
                     display: none
 
             h1,h2,p
                 font-family: 'Anton', Impact, sans-serif
-                font-size: clamp(1rem, 2vw, 2rem)
+                font-size: clamp(1rem, 2vw, 2rem) !important
                 text-transform: uppercase
                 color: variables.$naranja
                 -webkit-text-stroke: 1px #171717
                 text-shadow: variables.$sombra-texto
+                text-align: center
+
             p
                 font-size: clamp(0.8rem, 2vw, 1rem)
 
@@ -98,9 +101,10 @@ main
             // transition: all .3s ease-in-out
 
     .jugar-nuevo
-        height: 4.5rem
+        height: 4.5rem 
         margin-top: .5rem
         display: none
+        width: auto !important
 
         button 
             height: 100%

@@ -10,7 +10,7 @@ mostrarFirst(enlace())
 boton_azar.addEventListener("click", async () => {
     let ganador= []
 
-    for (let index = 0; index < 30; index++) {
+    for (let index = 0; index < 50; index++) {
 
         const jugadores = await enlace()
     

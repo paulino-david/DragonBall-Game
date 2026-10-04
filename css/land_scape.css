@@ -1,1 +1,45 @@
-/*# sourceMappingURL=land_scape.css.map */
+@media (orientation: landscape) and (max-width: 768px) {
+  .logo {
+    height: 30% !important;
+  }
+  .logo img {
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .vs {
+    height: 65% !important;
+  }
+  .vs .versus {
+    gap: 0 !important;
+  }
+  .vs .versus img, .vs .versus .azar, .vs .versus .jugar-nuevo {
+    width: 70% !important;
+  }
+  .vs .versus img button, .vs .versus .azar button, .vs .versus .jugar-nuevo button {
+    width: 100%;
+    font-size: clamp(1rem, 2vw, 2rem);
+    display: flex;
+    justify-content: center;
+  }
+  .jugar-nuevo {
+    width: 30%;
+  }
+  .jugar-nuevo button {
+    width: 100%;
+    font-size: clamp(1rem, 1vw, 1rem);
+    display: flex;
+    justify-content: center;
+  }
+  .player {
+    gap: 0 !important;
+    position: relative;
+  }
+  .player .ganador {
+    position: absolute !important;
+    top: 4rem;
+  }
+  h1, h2 {
+    font-size: clamp(1rem, 1vw, 1rem) !important;
+  }
+}/*# sourceMappingURL=land_scape.css.map */

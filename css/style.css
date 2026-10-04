@@ -91,16 +91,18 @@ main .vs .player .personaje .infoJugador, main .vs .versus .personaje .infoJugad
   bottom: 2rem;
 }
 main .vs .player .personaje .ganador, main .vs .versus .personaje .ganador {
+  position: relative !important;
   width: 25%;
   display: none;
 }
 main .vs .player h1, main .vs .player h2, main .vs .player p, main .vs .versus h1, main .vs .versus h2, main .vs .versus p {
   font-family: "Anton", Impact, sans-serif;
-  font-size: clamp(1rem, 2vw, 2rem);
+  font-size: clamp(1rem, 2vw, 2rem) !important;
   text-transform: uppercase;
   color: #ffd33d;
   -webkit-text-stroke: 1px #171717;
   text-shadow: 2px 2px 0 #171717;
+  text-align: center;
 }
 main .vs .player p, main .vs .versus p {
   font-size: clamp(0.8rem, 2vw, 1rem);
@@ -149,6 +151,7 @@ main .jugar-nuevo {
   height: 4.5rem;
   margin-top: 0.5rem;
   display: none;
+  width: auto !important;
 }
 main .jugar-nuevo button {
   height: 100%;
